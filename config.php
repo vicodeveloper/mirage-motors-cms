@@ -12,6 +12,7 @@ const MODEL = 'model/model.php';
 const CONTROLLER = 'controller/controller.php';
 const VIEW = 'views/';
 const TEMPLATE = 'mirage';
+const TITLE = 'Mirage Motors';
 
 // db config data
 
