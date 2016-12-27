@@ -5,13 +5,14 @@
  * Date: 026 26.12.16
  * Time: 16:04
  */
-// Site configs
+defined('ViCODev') or die("Access interzis!");
 
+// Site configs
 const PATH = 'http://mm.vico-developer.com/';
-const MODEL = 'model/model.php';
-const CONTROLLER = 'controller/controller.php';
+const MODEL = 'models/model.php';
+const CONTROLLER = 'controllers/controller.php';
 const VIEW = 'views/';
-const TEMPLATE = 'mirage';
+const TEMPLATE = VIEW.'mirage/';
 const TITLE = 'Mirage Motors';
 
 // db config data

@@ -6,5 +6,11 @@
  * Time: 13:48
  */
 
+const ViCODev = TRUE;
+
+// connect config file
 require_once 'config.php';
-require_once 'models/Database.php';
+
+// connect controller file
+/** @noinspection PhpIncludeInspection */
+require_once CONTROLLER;

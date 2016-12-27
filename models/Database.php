@@ -6,6 +6,8 @@
  * Date: 026 26.12.16
  * Time: 15:49
  */
+defined('ViCODev') or die("Access interzis!");
+
 class Database
 {
 	 public $isConn;
@@ -69,6 +71,4 @@ class Database
 	 public function deleteRow($query, $params=[]){
 	 	 $this->insertRow($query, $params);
 	 }
-
-
 }
