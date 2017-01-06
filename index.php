@@ -6,6 +6,8 @@
  * Time: 13:48
  */
 
+error_reporting(E_ALL);
+
 const ViCODev = TRUE;
 
 // connect config file

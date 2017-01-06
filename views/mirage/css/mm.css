@@ -11,7 +11,7 @@
     background-color: #283593 !important;
 }
 
-.active a{
+.active1 a{
     background-color: #ff2347 !important;
     color: #ffffff !important;
 }
@@ -123,6 +123,7 @@
     padding: 14px 22px;
     float: left;
     text-decoration: none;
+    text-transform: uppercase;
     color: #f0f0f0;
     font-size: 13px;
     background: #414956;

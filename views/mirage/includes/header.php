@@ -53,8 +53,8 @@ defined('ViCODev') or die("Access interzis!"); ?>
 					 <div class="nav-wrapper menu_bg container">
 						  <a href="#" class="brand-logo center hide-on-large-only">Bine ati venit!</a>
 						  <ul class="left hide-on-med-and-down menu_desc">
-								<li <?php echo ($view == 'includes/main') ? "class='active'" : ""; ?>><a class="waves-effect" href="/">О нас</a></li>
-								<li <?php echo ($view == 'products') ? "class='active'" : ""; ?>><a class="waves-effect" href="?view=products">Продукция</a></li>
+								<li <?php echo ($view == 'includes/main') ? "class='active1'" : ""; ?>><a class="waves-effect" href="/">О нас</a></li>
+								<li <?php echo ($view == 'products') ? "class='active1'" : ""; ?>><a class="waves-effect" href="?view=products">Продукция</a></li>
 								<li><a class="waves-effect" href="#">Услуги</a></li>
 								<li><a class="waves-effect" href="#">Брэнды</a></li>
 								<li><a class="waves-effect" href="#">Доставка</a></li>

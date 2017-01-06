@@ -17,7 +17,7 @@ class Database
 	 public function __construct($username=DB_USER,$pass=DB_PASS,$host=DB_HOST,$dbname=DB_NAME,$option=[]){
 	 	 $this->isConn = TRUE;
 	 	 try{
-	 	 	 $this->datb = new PDO("mysql:host={$host};$dbname={$dbname};charset=utf8",$username,$pass,$option);
+	 	 	 $this->datb = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8",$username,$pass,$option);
 	 	 	 $this->datb->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	 	 	 $this->datb->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
 		 } catch (PDOException $e){
@@ -51,7 +51,26 @@ class Database
 				throw new Exception($e->getMessage());
 		  }
 	 }
+	 //get rows
+		  public function getMenu($query, $params=[]){
+				try{
+					 $stmt = $this->datb->prepare($query);
+					 $stmt->execute($params);
 
+					 $cat = array();
+
+					 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+						  if($row['parent'] !== 0){
+								$cat[$row['id_menu']][] = $row['ro_name_product'];
+						  } else {
+								$cat[$row['parent']]['sub'][$row['id_menu']] = $row['ro_name_product'];
+						  }
+						  return $menu = $cat;
+					 }
+				} catch (PDOException $e){
+					 throw new Exception($e->getMessage());
+				}
+		  }
 	//insert row
 	 public function insertRow($query, $params=[]){
 			try{
